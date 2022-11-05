@@ -1,0 +1,25 @@
+LOTTO_DOWNLOAD_PATH = 'https://www.national-lottery.co.uk/results/thunderball/draw-history/csv'
+DATA_PATH = 'lotto.csv'
+MAX_STEPS = 1
+FRONT_SIZE = 5
+BACK_SIZE = 1
+FRONT_NUMBERS_RANGE = 39
+BACK_THUNDERBALL_RANGE = 14
+LSTM_UNITS = 64
+DROPOUT_RATE = 0.5
+CHECKPOINTS_PATH = 'checkpoints'
+PREDICTION_MODEL_PATH = '{}/model_checkpoint_x'.format(CHECKPOINTS_PATH)
+PREDICTION_NUM = 5
+BATCH_SIZE = 128
+WINNING_RULES = {
+    (5, 1): 500000,
+    (5, 0): 5000,
+    (4, 1): 250,
+    (4, 0): 100,
+    (3, 1): 20,
+    (3, 0): 10,
+    (2, 1): 10,
+    (1, 1): 5,
+    (0, 1): 5
+}
+EPOCHS = 60
